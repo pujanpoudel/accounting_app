@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_accounting_app/homepage.dart';
+import 'package:simple_accounting_app/screens/homepage.dart';
 
 void main() {
   runApp(const MyApp());

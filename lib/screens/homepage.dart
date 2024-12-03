@@ -9,26 +9,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;
+  final int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Home")),
-      body: SingleChildScrollView(
+      appBar: AppBar(title: const Text("Home")),
+      body: const SingleChildScrollView(
         child: Center(
           child: Text("hello"),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "profile"),
-            BottomNavigationBarItem(icon: Icon(Icons.money), label: 'expenses')
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.redAccent,
-          onTap: _onItemTapped),
+        enableFeedback: true,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "profile"),
+          BottomNavigationBarItem(icon: Icon(Icons.money), label: 'expenses')
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.redAccent,
+      ),
     );
   }
 }

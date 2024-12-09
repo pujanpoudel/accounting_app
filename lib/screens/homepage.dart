@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:simple_accounting_app/screens/profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,7 +13,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Home")),
       body: const SingleChildScrollView(
         child: Center(
           child: Text("hello"),
